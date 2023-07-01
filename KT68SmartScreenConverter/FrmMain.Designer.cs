@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtJSONPath = new System.Windows.Forms.TextBox();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.txtJSONPath = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnPickColor = new System.Windows.Forms.Button();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.picColorPreview = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbAlign = new System.Windows.Forms.ComboBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.picColorPreview = new System.Windows.Forms.PictureBox();
-            this.txtColor = new System.Windows.Forms.TextBox();
-            this.btnPickColor = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnConvertImage = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picColorPreview)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,13 +58,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cyberboard R1 JSON File";
             // 
-            // txtJSONPath
-            // 
-            this.txtJSONPath.Location = new System.Drawing.Point(6, 20);
-            this.txtJSONPath.Name = "txtJSONPath";
-            this.txtJSONPath.Size = new System.Drawing.Size(367, 21);
-            this.txtJSONPath.TabIndex = 0;
-            // 
             // btnLoad
             // 
             this.btnLoad.Location = new System.Drawing.Point(379, 20);
@@ -73,6 +67,13 @@
             this.btnLoad.Text = "...";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // txtJSONPath
+            // 
+            this.txtJSONPath.Location = new System.Drawing.Point(6, 20);
+            this.txtJSONPath.Name = "txtJSONPath";
+            this.txtJSONPath.Size = new System.Drawing.Size(367, 21);
+            this.txtJSONPath.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -84,6 +85,46 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Options";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnPickColor);
+            this.groupBox4.Controls.Add(this.txtColor);
+            this.groupBox4.Controls.Add(this.picColorPreview);
+            this.groupBox4.Location = new System.Drawing.Point(150, 20);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(266, 52);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Background Color";
+            // 
+            // btnPickColor
+            // 
+            this.btnPickColor.Location = new System.Drawing.Point(165, 19);
+            this.btnPickColor.Name = "btnPickColor";
+            this.btnPickColor.Size = new System.Drawing.Size(95, 21);
+            this.btnPickColor.TabIndex = 2;
+            this.btnPickColor.Text = "Pick Color";
+            this.btnPickColor.UseVisualStyleBackColor = true;
+            this.btnPickColor.Click += new System.EventHandler(this.btnPickColor_Click);
+            // 
+            // txtColor
+            // 
+            this.txtColor.Location = new System.Drawing.Point(59, 20);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.ReadOnly = true;
+            this.txtColor.Size = new System.Drawing.Size(100, 21);
+            this.txtColor.TabIndex = 1;
+            this.txtColor.Text = "#000000";
+            // 
+            // picColorPreview
+            // 
+            this.picColorPreview.BackColor = System.Drawing.Color.Black;
+            this.picColorPreview.Location = new System.Drawing.Point(6, 20);
+            this.picColorPreview.Name = "picColorPreview";
+            this.picColorPreview.Size = new System.Drawing.Size(47, 26);
+            this.picColorPreview.TabIndex = 0;
+            this.picColorPreview.TabStop = false;
             // 
             // groupBox3
             // 
@@ -107,46 +148,6 @@
             this.cbAlign.Size = new System.Drawing.Size(118, 20);
             this.cbAlign.TabIndex = 0;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnPickColor);
-            this.groupBox4.Controls.Add(this.txtColor);
-            this.groupBox4.Controls.Add(this.picColorPreview);
-            this.groupBox4.Location = new System.Drawing.Point(150, 20);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(266, 52);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Background Color";
-            // 
-            // picColorPreview
-            // 
-            this.picColorPreview.BackColor = System.Drawing.Color.Black;
-            this.picColorPreview.Location = new System.Drawing.Point(6, 20);
-            this.picColorPreview.Name = "picColorPreview";
-            this.picColorPreview.Size = new System.Drawing.Size(47, 26);
-            this.picColorPreview.TabIndex = 0;
-            this.picColorPreview.TabStop = false;
-            // 
-            // txtColor
-            // 
-            this.txtColor.Location = new System.Drawing.Point(59, 20);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.ReadOnly = true;
-            this.txtColor.Size = new System.Drawing.Size(100, 21);
-            this.txtColor.TabIndex = 1;
-            this.txtColor.Text = "#000000";
-            // 
-            // btnPickColor
-            // 
-            this.btnPickColor.Location = new System.Drawing.Point(165, 19);
-            this.btnPickColor.Name = "btnPickColor";
-            this.btnPickColor.Size = new System.Drawing.Size(95, 21);
-            this.btnPickColor.TabIndex = 2;
-            this.btnPickColor.Text = "Pick Color";
-            this.btnPickColor.UseVisualStyleBackColor = true;
-            this.btnPickColor.Click += new System.EventHandler(this.btnPickColor_Click);
-            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(12, 158);
@@ -157,11 +158,22 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnConvertImage
+            // 
+            this.btnConvertImage.Location = new System.Drawing.Point(294, 158);
+            this.btnConvertImage.Name = "btnConvertImage";
+            this.btnConvertImage.Size = new System.Drawing.Size(140, 23);
+            this.btnConvertImage.TabIndex = 3;
+            this.btnConvertImage.Text = "Convert with Image";
+            this.btnConvertImage.UseVisualStyleBackColor = true;
+            this.btnConvertImage.Click += new System.EventHandler(this.btnConvertImage_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 189);
+            this.Controls.Add(this.btnConvertImage);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -173,10 +185,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picColorPreview)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -194,6 +206,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cbAlign;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnConvertImage;
     }
 }
 

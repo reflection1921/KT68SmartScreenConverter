@@ -25,7 +25,6 @@ namespace KT68SmartScreenConverter
         public string Convert(AlignType align, string backgroundColor)
         {
             kt68JObj["led effects"][0]["frames"] = GetFrames(backgroundColor, align);
-            File.WriteAllText("sss.json", kt68JObj.ToString());
 
             return kt68JObj.ToString();
 

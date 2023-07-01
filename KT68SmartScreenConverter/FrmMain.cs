@@ -79,5 +79,11 @@ namespace KT68SmartScreenConverter
 
             MessageBox.Show("File is successfully converted.", "KT68 SmartScreen Converter", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnConvertImage_Click(object sender, EventArgs e)
+        {
+            FrmConvImage frmConvImage = new FrmConvImage();
+            frmConvImage.ShowDialog();
+        }
     }
 }
